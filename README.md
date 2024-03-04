@@ -1,6 +1,7 @@
 # Custom Heap Implementation C++
 
 ![C++](https://img.shields.io/badge/C%2B%2B-11-pink)
+![License](https://img.shields.io/badge/License-MIT-purple)
 
 This repository contains a custom heap implementation in C++ supporting both min-heap and max-heap functionalities.
 
