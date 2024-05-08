@@ -10,6 +10,7 @@ static char heap_mem[max_heap_size];
 
 static char heap_obj[sizeof(Heap)];
 
+Heap* Heap::heapPointer = nullptr;
 
 Heap::Heap() {
     clear_mem();
@@ -28,15 +29,11 @@ Heap::~Heap() {
 }
 
 Heap *Heap::get_heap() {
-    static bool is_initialized = false;
-    static Heap *heap = nullptr;
-
-    if (!is_initialized) {
-        heap = new Heap();
-        is_initialized = true;
+    if (heapPointer == nullptr) {
+        heapPointer = new Heap();
     }
 
-    return heap;
+    return heapPointer;
 }
 
 void Heap::clear_mem() {

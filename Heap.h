@@ -15,6 +15,8 @@ private:
     mem_info_t *root;
     char *heap_end;
 
+    static Heap* heapPointer;
+
 private:
     Heap();
     static void *operator new(size_t size);
